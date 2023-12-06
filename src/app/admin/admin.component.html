@@ -1,0 +1,39 @@
+<html>
+    <head>
+
+    </head><body>
+ 
+        <form  [formGroup]="login">
+            <h1>Admin Login</h1>
+            <label for="username">UserName:</label>
+            <input  type="text" name="username" formControlName="usernames" ><br>
+            <label for="password">Password:</label>
+            <input  type="password" name="password" formControlName="passwords"><br>
+            <button type="button" (click)="authentication()">Login</button><br>
+            <span *ngIf="wrong">{{message}}</span>
+            <p>Do you want to change password?</p>
+            <button type="button" (click)="hellooo()">YES</button>&nbsp;&nbsp;&nbsp;
+            <button type="button"(click)="call()">NO</button>
+            <span *ngIf="nos">{{password}}</span>
+          
+        </form>
+    </body>
+</html>
+<html>
+  <head></head>
+  <body>
+    <div *ngIf="go">
+        <h4>Reset Password</h4>
+    <form [formGroup]="changepassword">
+        <label>Enter Your UserName:</label>
+        <input type="text"  formControlName="username"><br>
+        <label>Changepassword:</label>
+        <input type="password"  formControlName="password"><br>
+        <label>Confirmpassword:</label>
+        <input type="password"  formControlName="passwords"><br>
+        <button type="button"(click)="modify()">save</button>
+        <span *ngIf="true">{{messagee}}</span>
+    </form>
+</div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Available Items</h2>
+        <table>
+            <tr>
+            <th>Choosen Item</th>&nbsp;&nbsp;
+            <th>Quantity</th>
+        </tr>
+        <tr *ngFor="let hero of names">
+            <td>{{hero.x}}</td>&nbsp;&nbsp;
+            <td>{{hero.y}}</td>
+       <td>  <button type="submit" (click)="pass(hero.z,hero.x)" routerLink="/payment">Order</button></td>
+        </tr>
+        </table>
+      
+    </body>
+
+</html>

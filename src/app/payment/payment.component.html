@@ -1,0 +1,26 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Ordering Details</h2>
+        <form [formGroup]="payform">
+        <label for="name">Enter The Quantity:</label>
+        <input type="number" (input)="oninputevent($event)"  formcontrolName="quantity"><br>
+   
+          <div *ngFor="let hero of pricee">
+        <label for="price">One Price of yoursorder</label>
+          <input type="text" [value]="hero.price" formcontrolName="priceuh"><br>
+           
+       
+           
+   
+             
+          <label for="price">Total Amount</label>
+          <input type="text" [value]="niviii" formcontrolName="amount">  <br>
+          <button type="button" (click)="pay(hero.name)" routerLink="/confirm">Pay</button>
+        </div>
+
+        </form>
+    </body>
+</html>

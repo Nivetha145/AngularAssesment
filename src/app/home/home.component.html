@@ -1,0 +1,43 @@
+<html>
+    <head>
+       </head>
+<body>
+    <button type="button" routerLink="/admin">Admin</button>
+    <h3>Kitchen Story Online Shopping</h3>
+
+
+<form [formGroup]="searchform">
+
+ <label for="item">What Do You Want:</label>  
+ <select formcontrolName="choose" *ngFor="let hero of food" (input)="oninputevent($event)">
+<option>Select Food Items</option>
+<option value="{{hero.value1}}">{{hero.value1}}</option>
+<option value="{{hero.value2}}">{{hero.value2}}</option>
+<option value="{{hero.value3}}">{{hero.value3}}</option>
+<option value="{{hero.value4}}">{{hero.value4}}</option>
+  
+
+  
+</select> <br><br>
+<button type="button" (click)=" sendd()">Search</button>
+<table *ngIf="search">
+
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+    
+    </tr>
+<tr *ngFor="let hero1 of item">
+  
+    <td >{{hero1.name}}</td>
+    <td>{{hero1.price}}</td>
+   <td><button type="button"  (click)="send(hero1.quantity,hero1.name,hero1.price)" routerLink="/search">Purchase</button><br></td>
+
+   
+</tr>
+</table> 
+
+</form>
+<!-- <img src="/assets/images.jfif" class="fullscreen"> -->
+</body>
+</html>

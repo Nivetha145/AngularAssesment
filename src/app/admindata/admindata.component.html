@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h3>Food Items Name</h3> 
+            <table  class="table table-bordered">
+           
+                <thead  class="thead-dark" *ngFor="let hero of fooditems">
+
+                <th scope="col"><a hsref="" (click)="call()">{{hero.value1}}</a></th>
+                <th scope="col"><a hsref="" (click)="call1()">{{hero.value2}}</a></th>
+                <th scope="col"><a hsref="" (click)="call2()">{{hero.value3}}</a></th>
+                <th scope="col"><a hsref="" (click)="call3()">{{hero.value4}}</a></th>
+                
+            </thead>     
+            </table>
+                 <table   class="table table-bordered" *ngIf="biscuit">
+                    <tr>
+                        <th>CoLLection Of Available Biscuits</th>
+                    </tr>
+                  <button type="button" (click)="Add()">Add</button>
+                    <tr *ngIf="include">
+                        <td>Enter name:<input type="text" [(ngModel)]="a"></td>
+                        <td>Enter Price:<input type="text"[(ngModel)]="b"></td>
+                        <td>Enter Quantity:<input type="text" [(ngModel)]="c"></td>
+                        <td><button type="Submit"(click)="submit()">Submit</button></td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Function</th>
+                  
+                    </tr>
+            
+                    <tr *ngFor="let hero1 of Biscuits; let i=index">
+               
+                        <td>{{hero1.name}}</td>
+                        <td>{{hero1.price}}</td>
+                        <td>{{hero1.quantity}}</td>
+                   
+                        <td><button type="button" (click)="delete(i)">delete</button></td>
+                    </tr>
+                  </table>
+                  <table   class="table table-bordered"*ngIf="fruit">
+                    <tr>
+                        <th>CoLLection Of Available Fruits</th>
+                    </tr>
+                    <tr>  <button type="button"(click)="Add1()">Add</button></tr>
+                    <tr *ngIf="include1">
+                        <td>Enter name:<input type="text" [(ngModel)]="a1"></td>
+                        <td>Enter Price:<input type="text" [(ngModel)]="b1"></td>
+                        <td>Enter Quantity:<input type="text" [(ngModel)]="c1"></td>
+                        <td><button type="Submit"(click)="submit1()">Submit</button></td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Function</th>
+                    </tr>
+            
+                    <tr *ngFor="let hero2 of Fruits;let i=index">
+               
+                        <td>{{hero2.name}}</td>
+                        <td>{{hero2.price}}</td>
+                        <td>{{hero2.quantity}}</td>
+                   
+                        <td><button type="button"(click)="delete1(i)">delete</button></td>
+                        
+                    </tr>
+                  </table>
+                  <table   class="table table-bordered" *ngIf="flour">
+                    <tr>
+                        <th>CoLLection Of Available FLour</th>
+                    </tr>
+                    <tr>  <button type="button" (click)="Add2()">Add</button></tr>
+                    <tr *ngIf="include2">
+                        <td>Enter name:<input type="text" [(ngModel)]="a2"></td>
+                        <td>Enter Price:<input type="text"[(ngModel)]="b2"></td>
+                        <td>Enter Quantity:<input type="text" [(ngModel)]="c2"></td>
+                        <td><button type="Submit"(click)="submit2()">Submit</button></td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Function</th>
+                    </tr>
+            
+                    <tr *ngFor="let hero3 of Flours;let i=index">
+               
+                        <td>{{hero3.name}}</td>
+                        <td>{{hero3.price}}</td>
+                        <td>{{hero3.quantity}}</td>
+                   
+                        <td><button type="button"(click)="delete2(i)">delete</button></td>
+                        
+                    </tr>
+                  </table>
+            
+                <table  class="table table-bordered" *ngIf="Vegetable">
+                    <tr>
+                        <th>CoLLection Of Available Vegetables</th>
+                    </tr>
+                  <tr>  <button type="button"(click)="Add3()">Add</button></tr>
+                  <tr *ngIf="include3">
+                    <td>Enter name:<input type="text" [(ngModel)]="a1"></td>
+                    <td>Enter Price:<input type="text"  [(ngModel)]="b3" ></td>
+                    <td>Enter Quantity:<input type="text"  [(ngModel)]="c3"></td>
+                    <td><button type="Submit"(click)="submit3()">Submit</button></td>
+                </tr>
+                  <tr>
+
+                      <th>Name</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                      <th>Function</th>
+                  </tr>
+           
+                  <tr *ngFor="let hero4 of Vegetables;let i=index" >
+                      <td>{{hero4.name}}</td>
+                      <td>{{hero4.price}}</td>
+                      <td>{{hero4.quantity}}</td>
+                      <td><button type="button" (click)="delete3(i)">delete</button></td>
+                  </tr>
+                 
+                </table>
+
+  
+  
+    </body>
+</html>

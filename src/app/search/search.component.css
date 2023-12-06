@@ -1,0 +1,19 @@
+button {
+    background-color:#3c8dCbde;
+    color: white;
+
+
+    border: none;
+
+
+  }
+  body{
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    background-image: url(/assets/hi.jpg);
+}
